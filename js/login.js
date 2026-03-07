@@ -76,4 +76,4 @@ localStorage.setItem("vmk_user",email)
 
 window.location.href="index.html"
 
-})
+}) 
