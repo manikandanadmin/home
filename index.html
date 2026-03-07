@@ -1,233 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VMK Services</title>
+<title>VMK Networks</title>
 
-<style>
+<link rel="icon" href="images/logo.png">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-color:white;
-min-height:100vh;
-overflow-x:hidden;
-}
-
-/* VIDEO BACKGROUND */
-
-.video-bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-z-index:-2;
-}
-
-/* DARK OVERLAY */
-
-.overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-z-index:-1;
-}
-
-/* HEADER */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 30px;
-background:rgba(0,0,0,0.6);
-}
-
-.logo{
-font-size:24px;
-font-weight:bold;
-letter-spacing:2px;
-}
-
-/* NAVIGATION */
-
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
-
-nav ul li a{
-text-decoration:none;
-color:white;
-font-size:16px;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-color:#ff3b3b;
-}
-
-/* MOBILE MENU BUTTON */
-
-.menu-btn{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
-/* HERO SECTION */
-
-.hero{
-display:flex;
-align-items:center;
-height:85vh;
-padding:40px;
-}
-
-.hero-content{
-max-width:600px;
-}
-
-.hero h1{
-font-size:50px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:25px;
-line-height:1.6;
-}
-
-.btn{
-display:inline-block;
-padding:12px 28px;
-background:#ff3b3b;
-border-radius:6px;
-text-decoration:none;
-color:white;
-}
-
-.btn:hover{
-background:#cc2a2a;
-}
-
-/* MOBILE RESPONSIVE */
-
-@media (max-width:768px){
-
-nav{
-position:absolute;
-top:60px;
-left:0;
-width:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-}
-
-nav ul{
-flex-direction:column;
-text-align:center;
-padding:20px 0;
-}
-
-nav ul li{
-margin:10px 0;
-}
-
-.menu-btn{
-display:block;
-}
-
-.hero{
-justify-content:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-}
-
-nav.active{
-display:block;
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<!-- VIDEO BACKGROUND -->
+<nav class="navbar">
 
-<video autoplay muted loop playsinline class="video-bg">
-<source src="background.mp4" type="video/mp4">
+<div class="logo">
+<img src="images/logo.png">
+<span>VMK NETWORKS</span>
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="pages/mobile-repair.html">Mobile Repair</a></li>
+<li><a href="pages/pc-laptop-service.html">PC / Laptop Service</a></li>
+<li><a href="pages/about.html">About</a></li>
+<li><a href="login.html">Login</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<video autoplay muted loop class="video-bg">
+<source src="video/background.mp4" type="video/mp4">
 </video>
 
 <div class="overlay"></div>
 
-<header>
-
-<div class="logo">VMK NETWORKS</div>
-
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-<nav id="navMenu">
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Mobile Repair</a></li>
-<li><a href="#">Laptop / PC</a></li>
-<li><a href="#">Web Development</a></li>
-</ul>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
+<div class="content">
 
 <h1>Professional Tech Services</h1>
 
-<p>
-Mobile Repair, Laptop & PC Service, and Professional Web Development Solutions.
-Reliable technical support for all your digital needs.
-</p>
+<p>Mobile Repair • Laptop Upgrade • PC Service</p>
 
-<a href="#" class="btn">Explore Services</a>
+<a href="login.html" class="btn">Explore Services</a>
 
 </div>
 
 </section>
 
-<script>
-
-function toggleMenu(){
-document.getElementById("navMenu").classList.toggle("active");
-}
-
-</script>
+<script src="js/app.js"></script>
 
 </body>
 </html>
