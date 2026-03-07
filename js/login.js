@@ -3,47 +3,40 @@ function togglePassword(){
 let password = document.getElementById("password")
 
 if(password.type === "password"){
-
-password.type = "text"
-
+password.type="text"
 }else{
-
-password.type = "password"
-
+password.type="password"
 }
 
 }
 
 
-/* SEND DATA TO GOOGLE SHEETS */
+function toggleRegPassword(){
 
-document.getElementById("loginForm")
-.addEventListener("submit",function(e){
+let password = document.getElementById("regPassword")
 
-e.preventDefault()
+if(password.type === "password"){
+password.type="text"
+}else{
+password.type="password"
+}
 
-let username = document.getElementById("username").value
-let password = document.getElementById("password").value
+}
 
 
-fetch("YOUR_GOOGLE_SCRIPT_URL",{
+function showRegister(){
 
-method:"POST",
+document.querySelector(".login-card").style.display="none"
 
-body:JSON.stringify({
+document.getElementById("registerCard").style.display="block"
 
-username:username,
-password:password
+}
 
-})
 
-})
+function showLogin(){
 
-.then(res=>res.text())
-.then(data=>{
+document.querySelector(".login-card").style.display="block"
 
-alert("Data saved")
+document.getElementById("registerCard").style.display="none"
 
-})
-
-})
+}
